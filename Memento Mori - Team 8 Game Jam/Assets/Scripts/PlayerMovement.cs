@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float playerSpeed = 5;
-    [SerializeField] Transform position;
+    [SerializeField] GameObject player;
 
     void Start()
     {
@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = new Vector3(h, 0, v);
         transform.Translate(move * playerSpeed * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        {
+            transform.RotateAround(player.transform.position, Vector3.up, 35 * Time.deltaTime);
+        }
 
     }
 }

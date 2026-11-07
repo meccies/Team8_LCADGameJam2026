@@ -11,6 +11,7 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
