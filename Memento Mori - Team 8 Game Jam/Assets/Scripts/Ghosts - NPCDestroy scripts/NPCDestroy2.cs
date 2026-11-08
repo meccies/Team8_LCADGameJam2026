@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NPCDestroy : MonoBehaviour
+public class NPCDestroy2 : MonoBehaviour
 {
 
     // Place this script in trigger collission obj
@@ -18,9 +18,11 @@ public class NPCDestroy : MonoBehaviour
 
         if (chaser != null)
         {
-            Destroy(sprite, 0.1f);
-            Debug.Log("Sprite destroyed"); 
+            {
+                Destroy(sprite, 0.1f);
+                Debug.Log("Sprite2 destroyed"); 
+            }
+            
         }
-
     }
 }

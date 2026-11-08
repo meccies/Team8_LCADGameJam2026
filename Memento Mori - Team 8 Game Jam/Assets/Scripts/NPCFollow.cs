@@ -12,7 +12,7 @@ public class NPCFollow : MonoBehaviour
     private static int currentChaserCount = 0; 
     
     // Tracks whether the player has touched the object yet
-    private bool isChasing = false; 
+    public bool isChasing = false; 
 
     void Update()
     {
