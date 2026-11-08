@@ -356,7 +356,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimerManager
   timerText: {fileID: 1580358714}
   countdown: 5
-  nPCManager: {fileID: 0}
 --- !u!4 &754171884
 Transform:
   m_ObjectHideFlags: 0
@@ -810,7 +809,7 @@ GameObject:
   - component: {fileID: 1320210746}
   - component: {fileID: 1320210745}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1852,6 +1851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCManager
   soulSprite: {fileID: 362670597}
+  timerManager: {fileID: 0}
 --- !u!114 &7666947574240162678
 MonoBehaviour:
   m_ObjectHideFlags: 0
