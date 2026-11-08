@@ -14,16 +14,7 @@ public class Dialogue : MonoBehaviour
     public void Start()
     {
         textComponent.text = string.Empty;
-    }
-
-    // Unity automatically calls this when a user clicks the Collider 2D
-    private void OnMouseDown()
-    {
-        // Only start the dialogue if it isn't already running
-        if (textComponent.text == string.Empty)
-        {
-            StartDialogue();
-        }
+        StartDialogue();
     }
 
     public void Update()
