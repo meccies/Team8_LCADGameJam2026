@@ -3,7 +3,6 @@ using TMPro;
 
 public class TimerManager : MonoBehaviour
 {
-    public GameObject sprite;
     public TMP_Text timerText;
     public float countdown = 35f; // Time in seconds
 

@@ -23,7 +23,7 @@ public class NPCFollow : MonoBehaviour
         }
     }
 
-    private void MoveToPlayer()
+    public void MoveToPlayer()
     {
         float currentDistance = Vector3.Distance(transform.position, player.position);
 
@@ -34,7 +34,7 @@ public class NPCFollow : MonoBehaviour
     }
 
     // This detects when the player walks into the object's trigger collider
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         // Check if the object is the player AND we haven't already started chasing
         if (!isChasing && (other.transform == player || other.CompareTag("Player")))
@@ -50,6 +50,16 @@ public class NPCFollow : MonoBehaviour
             {
                 Debug.Log("Cannot chase: Maximum limit reached!");
             }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (isChasing)
+        {
+            currentChaserCount--;
+            // Ensure the count never drops below zero due to unexpected edge cases
+            currentChaserCount = Mathf.Max(0, currentChaserCount); 
         }
     }
 }

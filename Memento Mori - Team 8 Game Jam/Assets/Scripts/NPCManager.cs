@@ -4,7 +4,7 @@ using UnityEngine;
 public class NPCManager : MonoBehaviour
 {
     // Place in player gameobject due to OnTriggerEnter method, select sprite and time manager in slot
-    public GameObject soulSprite;
+    public GameObject sprite;
     public float timeToAdd = 5f;
 
     public TimerManager timerManager;
@@ -14,18 +14,18 @@ public class NPCManager : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
+    //public void OnTriggerEnter(Collider other)
+    //{
 
-         TimerManager timer = FindAnyObjectByType<TimerManager>();
+         //TimerManager timer = FindAnyObjectByType<TimerManager>();
 
-        if (timer != null)
-        {
-            timer.AddBonusTime(timeToAdd);
-            Destroy(soulSprite, 0.1f);
-            Debug.Log("Destroyed"); 
-        }
+        //if (timer != null && other.CompareTag("Player"))
+        //{
+            //timer.AddBonusTime(timeToAdd);
+            //Destroy(sprite, 0.1f);
+           // Debug.Log("Sprite destroyed"); 
+       // }
         
 
-    }
+   // }
 }

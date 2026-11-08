@@ -7,7 +7,10 @@ public class EndingCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("EndCheckObject");
-        Debug.Log("Area Reached");
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Area Reached");
+        }
+
     }
 }
