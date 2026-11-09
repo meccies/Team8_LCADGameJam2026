@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - SpawnArea
+  - ScoreCollider
   layers:
   - Default
   - TransparentFX
