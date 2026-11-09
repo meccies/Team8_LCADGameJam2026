@@ -4057,6 +4057,8 @@ GameObject:
   - component: {fileID: 177501504}
   - component: {fileID: 177501503}
   - component: {fileID: 177501502}
+  - component: {fileID: 177501505}
+  - component: {fileID: 177501506}
   m_Layer: 0
   m_Name: Ghost NPC (3)
   m_TagString: Untagged
@@ -4112,11 +4114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &177501504
 SpriteRenderer:
   serializedVersion: 3
@@ -4177,6 +4175,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &177501505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177501500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &177501506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177501500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
+--- !u!114 &180792350 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5015186507958239342, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+  m_PrefabInstance: {fileID: 810375015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &182000172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4687,6 +4722,7 @@ GameObject:
   - component: {fileID: 201557926}
   - component: {fileID: 201557925}
   - component: {fileID: 201557924}
+  - component: {fileID: 201557927}
   m_Layer: 0
   m_Name: Ghost NPC (12)
   m_TagString: Untagged
@@ -4742,11 +4778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &201557926
 SpriteRenderer:
   serializedVersion: 3
@@ -4807,6 +4839,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &201557927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201557922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &209000249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7910,109 +7955,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2232952877369940510, guid: c259e91f3a0c6ef408cab302d598d4bc, type: 3}
---- !u!1 &351934526
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 351934530}
-  - component: {fileID: 351934529}
-  - component: {fileID: 351934528}
-  - component: {fileID: 351934527}
-  m_Layer: 5
-  m_Name: UI Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &351934527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351934526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &351934528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351934526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.51
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &351934529
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351934526}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_UseReflectionProbes: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &351934530
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351934526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1352418645}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &352044836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8451,143 +8393,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 690106047850165013, guid: ed7a763a08155f34eb2d3ad99967ee86, type: 3}
---- !u!1 &371630050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 371630051}
-  - component: {fileID: 371630053}
-  - component: {fileID: 371630052}
-  m_Layer: 5
-  m_Name: TimerText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &371630051
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371630050}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.43813, y: 4.43813, z: 4.43813}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1352418645}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -19}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &371630052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371630050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 00
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 80065a3d2fcc29b4ba6d07aee5eec965, type: 2}
-  m_sharedMaterial: {fileID: -3112071165773007023, guid: 80065a3d2fcc29b4ba6d07aee5eec965, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &371630053
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371630050}
-  m_CullTransparentMesh: 1
 --- !u!1001 &373722124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10271,6 +10076,8 @@ GameObject:
   - component: {fileID: 448020365}
   - component: {fileID: 448020364}
   - component: {fileID: 448020363}
+  - component: {fileID: 448020366}
+  - component: {fileID: 448020367}
   m_Layer: 0
   m_Name: Ghost NPC (15)
   m_TagString: Untagged
@@ -10326,11 +10133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &448020365
 SpriteRenderer:
   serializedVersion: 3
@@ -10391,6 +10194,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &448020366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448020361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &448020367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448020361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &448651971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10639,6 +10468,8 @@ GameObject:
   - component: {fileID: 468110800}
   - component: {fileID: 468110799}
   - component: {fileID: 468110798}
+  - component: {fileID: 468110801}
+  - component: {fileID: 468110802}
   m_Layer: 0
   m_Name: Ghost NPC (4)
   m_TagString: Untagged
@@ -10694,11 +10525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &468110800
 SpriteRenderer:
   serializedVersion: 3
@@ -10759,6 +10586,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &468110801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468110796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &468110802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468110796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1 &476796699
 GameObject:
   m_ObjectHideFlags: 0
@@ -14940,6 +14793,8 @@ GameObject:
   - component: {fileID: 702180168}
   - component: {fileID: 702180167}
   - component: {fileID: 702180166}
+  - component: {fileID: 702180169}
+  - component: {fileID: 702180170}
   m_Layer: 0
   m_Name: Ghost NPC (8)
   m_TagString: Untagged
@@ -14995,11 +14850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &702180168
 SpriteRenderer:
   serializedVersion: 3
@@ -15060,6 +14911,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &702180169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702180164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &702180170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702180164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &702883013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15153,8 +15030,8 @@ Transform:
   - {fileID: 1710586142}
   - {fileID: 177501501}
   - {fileID: 468110797}
-  - {fileID: 1500137230}
   - {fileID: 2030456095}
+  - {fileID: 1500137230}
   - {fileID: 1748772360}
   - {fileID: 702180165}
   - {fileID: 963954016}
@@ -16905,6 +16782,103 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5476640861830841694, guid: a95b2a67e434ab04f8cb318a205c6957, type: 3}
+--- !u!1001 &810375015
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2762512803333042761, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_Name
+      value: UI Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074525839037424190, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
 --- !u!1001 &810981256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17326,6 +17300,71 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -651083865945916660, guid: 5b38183095bfd634e9750b50bf71911d, type: 3}
+--- !u!1001 &819998709
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2759544928793617566, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_Name
+      value: Ghost NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.959208
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.519759
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99948806
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.031995326
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 3.667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071018857289875689, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085268976032050963, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1733524913}
+    - target: {fileID: 8666177558044011653, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
+      propertyPath: maxScore
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1c68b2cfd6439314891b5b237e578bf2, type: 3}
 --- !u!1001 &823085074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20629,8 +20668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e240b347c12a4147b5b1337362e1f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerManager
-  timerText: {fileID: 371630052}
-  countdown: 35
+  timerText: {fileID: 180792350}
+  countdown: 4
 --- !u!4 &941453145
 Transform:
   m_ObjectHideFlags: 0
@@ -21186,6 +21225,8 @@ GameObject:
   - component: {fileID: 963954019}
   - component: {fileID: 963954018}
   - component: {fileID: 963954017}
+  - component: {fileID: 963954020}
+  - component: {fileID: 963954021}
   m_Layer: 0
   m_Name: Ghost NPC (9)
   m_TagString: Untagged
@@ -21241,11 +21282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &963954019
 SpriteRenderer:
   serializedVersion: 3
@@ -21306,6 +21343,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &963954020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963954015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &963954021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963954015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &965844651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21617,6 +21680,7 @@ GameObject:
   - component: {fileID: 991905547}
   - component: {fileID: 991905546}
   - component: {fileID: 991905545}
+  - component: {fileID: 991905548}
   m_Layer: 0
   m_Name: Ghost NPC (11)
   m_TagString: Untagged
@@ -21672,11 +21736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &991905547
 SpriteRenderer:
   serializedVersion: 3
@@ -21737,6 +21797,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &991905548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991905543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!4 &992264504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5b38183095bfd634e9750b50bf71911d, type: 3}
@@ -23560,6 +23633,8 @@ GameObject:
   - component: {fileID: 1106255371}
   - component: {fileID: 1106255370}
   - component: {fileID: 1106255369}
+  - component: {fileID: 1106255372}
+  - component: {fileID: 1106255373}
   m_Layer: 0
   m_Name: Ghost NPC (14)
   m_TagString: Untagged
@@ -23615,11 +23690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &1106255371
 SpriteRenderer:
   serializedVersion: 3
@@ -23680,6 +23751,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1106255372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106255367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &1106255373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106255367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &1109189581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27566,82 +27663,6 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1 &1352418644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1352418645}
-  - component: {fileID: 1352418647}
-  - component: {fileID: 1352418646}
-  m_Layer: 5
-  m_Name: HourGlassPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1352418645
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352418644}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20710368, y: 0.20710368, z: 0.20710368}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 371630051}
-  m_Father: {fileID: 351934530}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 865.9, y: 457}
-  m_SizeDelta: {x: 439, y: 472}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1352418646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352418644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0d18cdcc270f1a3469e7ffa70800aec5, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1352418647
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352418644}
-  m_CullTransparentMesh: 1
 --- !u!4 &1357525952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb5efc0152917cf49b670576d2ec0d1f, type: 3}
@@ -29098,6 +29119,8 @@ GameObject:
   - component: {fileID: 1441724411}
   - component: {fileID: 1441724413}
   - component: {fileID: 1441724414}
+  - component: {fileID: 1441724415}
+  - component: {fileID: 1441724416}
   m_Layer: 0
   m_Name: Ghost NPC
   m_TagString: Untagged
@@ -29192,11 +29215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!65 &1441724414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29218,6 +29237,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.92, y: 3.44, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1441724415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441724410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &1441724416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441724410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &1454365573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29461,6 +29506,8 @@ GameObject:
   - component: {fileID: 1467192572}
   - component: {fileID: 1467192571}
   - component: {fileID: 1467192570}
+  - component: {fileID: 1467192573}
+  - component: {fileID: 1467192574}
   m_Layer: 0
   m_Name: Ghost NPC (13)
   m_TagString: Untagged
@@ -29516,11 +29563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &1467192572
 SpriteRenderer:
   serializedVersion: 3
@@ -29581,6 +29624,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1467192573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467192568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &1467192574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467192568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1 &1467610601
 GameObject:
   m_ObjectHideFlags: 0
@@ -30226,6 +30295,8 @@ GameObject:
   - component: {fileID: 1500137233}
   - component: {fileID: 1500137232}
   - component: {fileID: 1500137231}
+  - component: {fileID: 1500137234}
+  - component: {fileID: 1500137235}
   m_Layer: 0
   m_Name: Ghost NPC (5)
   m_TagString: Untagged
@@ -30242,8 +30313,8 @@ Transform:
   m_GameObject: {fileID: 1500137229}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.42602214, z: -0, w: 0.9047128}
-  m_LocalPosition: {x: 8.73, y: -1.261, z: 22.67}
-  m_LocalScale: {x: 0.09001154, y: 0.09001154, z: 0.09001154}
+  m_LocalPosition: {x: 8.73, y: -1.2609999, z: 22.669998}
+  m_LocalScale: {x: 0.09001156, y: 0.09001153, z: 0.09001156}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714868622}
@@ -30281,11 +30352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &1500137233
 SpriteRenderer:
   serializedVersion: 3
@@ -30346,6 +30413,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1500137234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500137229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &1500137235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500137229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &1503672532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34445,6 +34538,8 @@ GameObject:
   - component: {fileID: 1710586145}
   - component: {fileID: 1710586144}
   - component: {fileID: 1710586143}
+  - component: {fileID: 1710586146}
+  - component: {fileID: 1710586147}
   m_Layer: 0
   m_Name: Ghost NPC (2)
   m_TagString: Untagged
@@ -34500,11 +34595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &1710586145
 SpriteRenderer:
   serializedVersion: 3
@@ -34565,6 +34656,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1710586146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710586141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &1710586147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710586141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1 &1711027382
 GameObject:
   m_ObjectHideFlags: 0
@@ -35131,6 +35248,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4143267299020566393, guid: 1cd5dbf8bd3a8304bbf0e3dde345207b, type: 3}
+--- !u!114 &1733524913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5213041241028191403, guid: 2049ca7cbe6a8ef44bdcad8365ecd70c, type: 3}
+  m_PrefabInstance: {fileID: 810375015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a831490bfcacf044afc15ee2e450ed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
 --- !u!1 &1734723190 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9b06cfdca8e23aa4a9b66717ecd8be93, type: 3}
@@ -35352,6 +35480,8 @@ GameObject:
   - component: {fileID: 1748772363}
   - component: {fileID: 1748772362}
   - component: {fileID: 1748772361}
+  - component: {fileID: 1748772364}
+  - component: {fileID: 1748772365}
   m_Layer: 0
   m_Name: Ghost NPC (7)
   m_TagString: Untagged
@@ -35407,11 +35537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &1748772363
 SpriteRenderer:
   serializedVersion: 3
@@ -35472,6 +35598,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1748772364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748772359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &1748772365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748772359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &1754177957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39414,6 +39566,7 @@ GameObject:
   - component: {fileID: 1919638466}
   - component: {fileID: 1919638465}
   - component: {fileID: 1919638464}
+  - component: {fileID: 1919638467}
   m_Layer: 0
   m_Name: Ghost NPC (10)
   m_TagString: Untagged
@@ -39469,11 +39622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &1919638466
 SpriteRenderer:
   serializedVersion: 3
@@ -39534,6 +39683,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1919638467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919638462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1001 &1922720061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42805,6 +42967,8 @@ GameObject:
   - component: {fileID: 2030456098}
   - component: {fileID: 2030456097}
   - component: {fileID: 2030456096}
+  - component: {fileID: 2030456099}
+  - component: {fileID: 2030456100}
   m_Layer: 0
   m_Name: Ghost NPC (6)
   m_TagString: Untagged
@@ -42860,11 +43024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1658062ec9c3a1d47bd6b97d7c52b49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCFollow
-  speed: 4
-  player: {fileID: 328242652}
-  stopDistanceOffset: 3
-  maxChasersAllowed: 1
-  isChasing: 0
+  sprite: {fileID: 0}
 --- !u!212 &2030456098
 SpriteRenderer:
   serializedVersion: 3
@@ -42925,6 +43085,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &2030456099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030456094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6f53c55f7fa734b9a0eaf158980bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogueBox: {fileID: 0}
+--- !u!114 &2030456100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030456094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57207132b8990c140bbbfcaa97641bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnTouch
+  maxScore: 13
 --- !u!1 &2031872490
 GameObject:
   m_ObjectHideFlags: 0
@@ -45182,7 +45368,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 90131154}
   - {fileID: 669818858}
-  - {fileID: 351934530}
+  - {fileID: 810375015}
   - {fileID: 941453145}
   - {fileID: 476796700}
   - {fileID: 328242650}
@@ -45379,3 +45565,4 @@ SceneRoots:
   - {fileID: 209000249}
   - {fileID: 1711027384}
   - {fileID: 1915758219}
+  - {fileID: 819998709}

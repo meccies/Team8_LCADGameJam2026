@@ -7,7 +7,7 @@ public class DestroyOnTouch : MonoBehaviour
     public static int score = 0;
 
     // Define your maximum score here
-    public int maxScore = 10;
+    public int maxScore = 13;
 
     // This handles 3D trigger zones (if "Is Trigger" is checked on your Collider)
     private void OnTriggerEnter(Collider other)
