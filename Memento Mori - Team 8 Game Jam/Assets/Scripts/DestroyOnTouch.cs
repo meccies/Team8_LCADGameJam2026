@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DestroyOnTouch : MonoBehaviour
 {
@@ -23,11 +24,13 @@ public class DestroyOnTouch : MonoBehaviour
                 // Check if the player just hit the maximum score
                 if (score == maxScore)
                 {
+                    SceneManager.LoadScene("Win Screen");
                     Debug.Log("Max score reached! You win!");
                 }
             }
             else
             {
+                
                 Debug.Log("Max score already reached! Score remains at: " + score);
             }
 
