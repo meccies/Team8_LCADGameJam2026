@@ -4,6 +4,8 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
+
+    // Add this script to your Dialogue panel
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
@@ -14,7 +16,8 @@ public class Dialogue : MonoBehaviour
     public void Start()
     {
         textComponent.text = string.Empty;
-        StartDialogue();
+        gameObject.SetActive(false);
+        //StartDialogue();
     }
 
     public void Update()
@@ -35,6 +38,8 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
+        gameObject.SetActive(true);
+        textComponent.text = string.Empty;
         index = 0;
         StartCoroutine(TypeLine());
     }
@@ -60,8 +65,7 @@ public class Dialogue : MonoBehaviour
         {
             // Clear text when done so it can be clicked and replayed later
             textComponent.text = string.Empty; 
-            // Note: If you deactivate the gameObject here, you won't be able 
-            // to click the sprite again unless something else reactivates it!
+            // Note: If you deactivate the gameObject here, you won't be able to click the sprite again unless something else reactivates it!
             gameObject.SetActive(false); 
         }
     }
